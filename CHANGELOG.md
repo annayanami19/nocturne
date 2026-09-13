@@ -9,29 +9,24 @@ dan versioning mengikuti [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Planned
 
-- Jadwal otomatis (aktif malam hari, mis. 18.00–06.00) — target v1.1
-- Mode otomatis mengikuti `prefers-color-scheme` OS — target v1.1
+- Jadwal otomatis (aktif malam hari, mis. 18.00–06.00) — target v1.2
 - Tema preset (AMOLED, Sepia, dsb.) — target v1.2
 - Dukungan Firefox (Gecko MV3) — target v1.2
 
-## [1.0.0] - 2026-09-14
-
-Rilis perdana ekstensi Nocturne.
+## [1.1.0] - 2026-09-14
 
 ### Added
 
-- Smart invert: filter CSS `invert(1) hue-rotate(180deg)` pada halaman dengan re-invert otomatis untuk gambar, video, canvas, SVG, iframe, dan emoji.
-- Toggle global dark mode dari popup.
-- Toggle per-situs (override per domain) dari popup.
-- Daftar situs pengecualian yang dikelola di options page (`localhost` & `127.0.0.1` dikecualikan sejak awal).
-- Slider Brightness (0.3–1.3), Contrast (0.7–1.3), dan Warmth (0–1) dengan efek real-time.
-- Keyboard shortcut `Alt+Shift+D` untuk toggle cepat via `chrome.commands`.
-- Live sync: perubahan setelan langsung berlaku di semua tab tanpa reload (`chrome.storage.onChanged`).
-- Penyimpanan setelan di `chrome.storage.sync` (ikut profil antar perangkat).
-- Badge ON/OFF pada ikon toolbar dari background service worker.
-- UI popup & options page berbahasa Indonesia, dibangun dengan React 18 + TypeScript (strict).
-- Build pipeline Vite 5 + CRXJS 2.7 (Manifest V3), icon otomatis via `scripts/make-icons.mjs`.
-- Dokumentasi: README, Panduan & Instalasi, Arsitektur, PLAN spesifikasi teknis, CHANGELOG.
+- Cek pembaruan otomatis: `chrome.alarms` sekali sehari + cek saat instalasi/startup service worker; bila versi baru tersedia, muncul notifikasi "Pembaruan tersedia" yang membuka halaman proyek saat diklik (maks. sekali per versi, via `chrome.storage.local`). Options page mendapat toggle "Cek pembaruan otomatis" dan tombol "Cek Pembaruan Sekarang" dengan hasil inline.
+- Mode otomatis: dark mode mengikuti tema sistem (`prefers-color-scheme`); selagi aktif, toggle manual di popup dikunci dengan teks status "Mengikuti tema sistem (gelap/terang)".
+- Backup & restore pengaturan: ekspor seluruh setelan ke file JSON (folder & nama file dipilih sendiri lewat `showSaveFilePicker`, fallback unduhan otomatis) dan pulihkan kembali dengan validasi minimal; options page juga menampilkan ringkasan setelan saat ini.
+- Tombol cepat whitelist situs di popup: mendeteksi domain tab aktif lalu menampilkan "🚫 Kecualikan Situs Ini" atau "↩️ Batalkan Whitelist Situs Ini" (varian warna berbeda) sesuai status daftar pengecualian. Klik menambah/menghapus domain dari `excludedSites` (domain ternormalisasi, anti-duplikat) dan menampilkan toast di dalam popup — bukan `chrome.notifications` — yang hilang otomatis setelah 4 detik. Label tombol reaktif terhadap perubahan storage dari luar (mis. saat domain dihapus lewat options page).
 
-[Unreleased]: https://github.com/annayanami19/nocturne-workspace/compare/v1.0.0...HEAD
+### Changed
+
+- **Default instalasi baru kini OFF**: toggle global `enabled` berubah dari `true` menjadi `false`; `chrome.runtime.onInstalled` menulis default ke storage hanya bila storage masih kosong, jadi setelan lama tidak pernah ditimpa.
+- Permissions baru di manifest: `alarms`, `notifications`, dan host permission `https://raw.githubusercontent.com/*` (sumber versi terbaru).
+
+[Unreleased]: https://github.com/annayanami19/nocturne-workspace/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/annayanami19/nocturne-workspace/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/annayanami19/nocturne-workspace/releases/tag/v1.0.0
