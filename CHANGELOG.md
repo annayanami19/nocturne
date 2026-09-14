@@ -9,9 +9,22 @@ dan versioning mengikuti [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Planned
 
-- Jadwal otomatis (aktif malam hari, mis. 18.00–06.00) — target v1.3
-- Tema preset (AMOLED, Sepia, dsb.) — target v1.3
-- Dukungan Firefox (Gecko MV3) — target v1.3
+- Jadwal otomatis (aktif malam hari, mis. 18.00–06.00) — target v1.4
+- Tema preset (AMOLED, Sepia, dsb.) — target v1.4
+- Dukungan Firefox (Gecko MV3) — target v1.4
+
+## [1.3.0] - 2026-09-14
+
+### Added
+
+- **Logo bulan beranimasi** di popup & halaman pengaturan: bulan mengambang naik-turun sambil bergoyang, berputar penuh, dan berpendar cahaya yang berdenyut — ditemani tiga bintang kecil yang berkelip bergantian. Murni hiasan; tidak mengubah cara kerja ekstensi. Animasi otomatis dimatikan bila sistem kamu diatur untuk mengurangi gerakan.
+- **Mode gelap per-situs yang benar-benar mandiri.** Tombol **"Situs Ini"** di popup kini bisa menyalakan mode gelap untuk **satu situs saja** tanpa mengubah situs lain — termasuk saat tombol global sedang nonaktif. Popup juga menampilkan petunjuk saat mode global nonaktif, dan memberi tahu bila situs tersebut diblokir oleh daftar situs.
+- **Pintasan `Alt+Shift+S`** kini menjelaskan alasannya bila situs sedang diblokir daftar, bukan gagal tanpa pesan.
+
+### Fixed
+
+- Pesan pada tombol cepat daftar situs tidak lagi menyebut "perlu muat ulang halaman" — perubahan berlaku seketika.
+- Klik notifikasi "situs diblokir daftar" tidak lagi membuka halaman proyek.
 
 ## [1.2.0] - 2026-09-14
 
@@ -42,7 +55,8 @@ dan versioning mengikuti [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - **Default instalasi baru kini OFF**: toggle global `enabled` berubah dari `true` menjadi `false`; `chrome.runtime.onInstalled` menulis default ke storage hanya bila storage masih kosong, jadi setelan lama tidak pernah ditimpa.
 - Permissions baru di manifest: `alarms`, `notifications`, dan host permission `https://raw.githubusercontent.com/*` (sumber versi terbaru).
 
-[Unreleased]: https://github.com/annayanami19/nocturne-workspace/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/annayanami19/nocturne-workspace/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/annayanami19/nocturne-workspace/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/annayanami19/nocturne-workspace/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/annayanami19/nocturne-workspace/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/annayanami19/nocturne-workspace/releases/tag/v1.0.0

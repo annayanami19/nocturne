@@ -34,7 +34,7 @@ Cukup satu hal: browser berbasis Chromium versi **110 atau lebih baru**, misalny
 
 ### Cara 2 — Dari file ZIP
 
-1. **Extract** dulu file `Nocturne-v1.2.0.zip` ke sebuah folder
+1. **Extract** dulu file `Nocturne-v1.3.0.zip` ke sebuah folder
 2. Ikuti langkah yang sama seperti Cara 1, pilih folder hasil extract
 
 ---
@@ -68,11 +68,19 @@ Tidak ingin cek otomatis? Matikan lewat toggle "Cek pembaruan otomatis" di penga
 ### 📦 Backup & Restore Pengaturan *(baru v1.1)*
 Ada di pengaturan → bagian **Backup & Restore** (di atasnya tampil ringkasan setelan saat ini).
 
-- **Backup Pengaturan**: simpan seluruh setelan ke file JSON — **kamu memilih sendiri folder dan nama filenya** (saran nama: `nocturne-backup-v1.2.0.json`). Cocok untuk memindahkan setelan ke komputer lain atau sekadar jaga-jaga.
+- **Backup Pengaturan**: simpan seluruh setelan ke file JSON — **kamu memilih sendiri folder dan nama filenya** (saran nama: `nocturne-backup-v1.3.0.json`). Cocok untuk memindahkan setelan ke komputer lain atau sekadar jaga-jaga.
 - **Pulihkan Backup**: pilih file JSON hasil backup → setelan langsung ditulis kembali. File yang bukan backup Nocturne tidak akan merusak setelan.
 
-### 🌐 Toggle Per-Situs
-Di popup ada tombol khusus untuk situs yang sedang dibuka. Matikan untuk satu situs saja tanpa mematikan mode global.
+### 🌐 Toggle Per-Situs *(diperbarui v1.3 — kini mandiri)*
+Di popup, kartu **"Situs Ini"** punya tombol khusus untuk situs yang sedang dibuka.
+
+- **Menyalakan tombol ini menggelapkan HANYA situs itu** — situs lain tidak terpengaruh, walaupun tombol global sedang nonaktif. Statusnya: *"Aktif khusus situs ini"*.
+- **Mematikannya membuat situs itu kembali terang** meskipun mode global sedang aktif. Statusnya: *"Nonaktif khusus situs ini"*.
+- Tanpa override, situs mengikuti tombol global (status: *"Mengikuti global — aktif"* / *"Global nonaktif"*).
+
+Saat mode global nonaktif, popup menampilkan petunjuk *"💡 Nyalakan tombol di atas untuk menggelapkan situs ini saja"*, dan setelah dinyalakan muncul konfirmasi bahwa situs lain tetap mengikuti pengaturan global.
+
+> ⚠️ Bila situs yang sedang dibuka ada di daftar situs, tombol ini **dinonaktifkan** dan status menampilkan *"Situs dikecualikan"* (atau *"Tidak ada di daftar izinkan"* pada mode Hanya izinkan). Daftar situs adalah aturan terkuat — keluarkan dulu domainnya lewat tombol cepat di bawah, baru tombol per-situs bisa dipakai.
 
 ### 🚫 Tombol Cepat Whitelist Situs Ini *(baru v1.1)*
 Di popup, tepat di bawah toggle per-situs, ada tombol pintar yang mengenali situs yang sedang dibuka dan bekerja dua arah. Labelnya menyesuaikan **Cara kerja daftar situs** yang kamu pilih:
@@ -88,6 +96,11 @@ Di popup, tepat di bawah toggle per-situs, ada tombol pintar yang mengenali situ
 Setiap klik memunculkan notifikasi yang menghilang sendiri setelah ±4 detik. Muat ulang halaman bila perubahan belum terlihat pada halaman yang sedang terbuka.
 
 > ℹ️ Bedanya dengan toggle per-situs: toggle per-situs hanya menimpa status sementara untuk satu situs, sedangkan tombol ini mengelola **daftar permanen** yang sama dengan di halaman pengaturan — tanpa perlu mengetik domain manual.
+
+### ✨ Logo Beranimasi *(baru v1.3)*
+Bulan di pojok kiri atas popup dan halaman pengaturan kini hidup: mengambang naik-turun sambil bergoyang, sesekali berputar penuh satu kali, dan berpendar cahaya yang berdenyut — ditemani tiga bintang kecil yang berkelip bergantian.
+
+Murni hiasan, tidak mengubah cara kerja ekstensi sedikit pun. Bila sistemmu diatur untuk **mengurangi gerakan** (*reduce motion*), animasi otomatis dimatikan dan bulan hanya menampilkan pendar lembut yang diam.
 
 ### 🔔 Notifikasi Aksi & Undo *(baru v1.2)*
 Setiap aksi di popup maupun halaman pengaturan kini memberi umpan balik berupa **notifikasi kecil di bawah layar**:

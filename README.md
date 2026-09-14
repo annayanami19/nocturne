@@ -6,7 +6,7 @@
 
 **Ubah halaman web mana pun menjadi dark mode instan.** 🌙
 
-[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)](CHANGELOG.md)
 [![Chrome](https://img.shields.io/badge/Chrome-MV3%20110%2B-green.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
@@ -23,6 +23,8 @@ Cukup satu klik, halaman terang yang silau langsung berubah menjadi gelap dan ny
 ## ✨ Fitur
 
 - 🌙 **Smart Invert** — halaman gelap instan, gambar/video/emoji tetap natural
+- ✨ **Logo Beranimasi** *(baru v1.3)* — bulan mengambang, berputar, dan berpendar ditemani bintang berkelip
+- 🎯 **Mode Gelap Per-Situs Mandiri** *(baru v1.3)* — nyalakan untuk satu situs saja, bahkan saat mode global sedang nonaktif
 - 🖼️ **Perbaikan Gambar Latar** *(baru v1.2)* — foto latar tampil berwarna normal, tidak lagi negatif
 - ⚡ **Toggle Global & Per-Situs** — kendali penuh untuk semua situs atau satu domain saja
 - 🗂️ **Mode Daftar: Kecualikan / Hanya Izinkan** *(baru v1.2)* — pilih apakah daftar jadi daftar blokir atau daftar izin
@@ -60,6 +62,6 @@ Didistribusikan di bawah **MIT License**.
 
 <div align="center">
 
-Nocturne v1.2.0 — dibuat dengan 🌙
+Nocturne v1.3.0 — dibuat dengan 🌙
 
 </div>

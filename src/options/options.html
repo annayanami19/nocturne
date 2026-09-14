@@ -27,7 +27,10 @@
       }
       .container { max-width: 640px; margin: 0 auto; padding: 32px 20px 48px; }
       header.page-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
-      .logo { font-size: 34px; filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5)); }
+      /* Ukuran logo diatur wrapper agar bintang berkelip ikut berskala (logo.css).
+         Tidak ada rule `.logo` di sini — properti `filter`-nya akan bertabrakan
+         dengan animasi pendar. */
+      .page-header .logo-wrap { font-size: 34px; }
       h1 { font-size: 22px; font-weight: 700; }
       .tagline { font-size: 12px; color: var(--text-dim); }
       .card {
@@ -188,8 +191,8 @@
         color: var(--text-dim);
       }
     </style>
-    <script type="module" crossorigin src="/assets/options.html-BrbuRPB8.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/toast-DKVBMgfz.css">
+    <script type="module" crossorigin src="/assets/options.html-B-bI8CJ7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/toast-CpLRSzu-.css">
   </head>
   <body>
     <div id="root"></div>
