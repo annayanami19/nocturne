@@ -6,7 +6,7 @@
 
 **Ubah halaman web mana pun menjadi dark mode instan.** 🌙
 
-[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](CHANGELOG.md)
 [![Chrome](https://img.shields.io/badge/Chrome-MV3%20110%2B-green.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
@@ -23,11 +23,15 @@ Cukup satu klik, halaman terang yang silau langsung berubah menjadi gelap dan ny
 ## ✨ Fitur
 
 - 🌙 **Smart Invert** — halaman gelap instan, gambar/video/emoji tetap natural
+- 🖼️ **Perbaikan Gambar Latar** *(baru v1.2)* — foto latar tampil berwarna normal, tidak lagi negatif
 - ⚡ **Toggle Global & Per-Situs** — kendali penuh untuk semua situs atau satu domain saja
+- 🗂️ **Mode Daftar: Kecualikan / Hanya Izinkan** *(baru v1.2)* — pilih apakah daftar jadi daftar blokir atau daftar izin
 - 🤖 **Mode Otomatis** *(baru v1.1)* — dark mode menyala otomatis mengikuti tema gelap/terang sistem
 - 🚫 **Daftar Pengecualian + Tombol Cepat** *(tombol baru v1.1)* — situs tertentu tidak pernah digelapkan, cukup satu klik dari popup
 - 🎚️ **Slider Brightness / Contrast / Warmth** — sesuaikan kenyamanan mata secara real-time
-- ⌨️ **Shortcut `Alt+Shift+D`** — toggle cepat dari keyboard
+- ⌨️ **Dua Shortcut** — `Alt+Shift+D` (global) & `Alt+Shift+S` (situs ini) *(baru v1.2)*
+- 🔔 **Notifikasi Aksi + Undo** *(baru v1.2)* — setiap aksi memberi umpan balik, dan bisa dibatalkan
+- 🔍 **Pencarian Daftar Situs** *(baru v1.2)* — temukan domain dengan cepat saat daftar sudah panjang
 - 🔄 **Live Sync** — perubahan setelan langsung berlaku di semua tab tanpa reload
 - 🔎 **Cek Pembaruan Otomatis** *(baru v1.1)* — pemeriksaan harian + notifikasi saat versi baru tersedia
 - 📦 **Backup & Restore** *(baru v1.1)* — simpan & pulihkan setelan ke file di folder pilihanmu
@@ -56,6 +60,6 @@ Didistribusikan di bawah **MIT License**.
 
 <div align="center">
 
-Nocturne v1.1.0 — dibuat dengan 🌙
+Nocturne v1.2.0 — dibuat dengan 🌙
 
 </div>
